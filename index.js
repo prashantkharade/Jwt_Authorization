@@ -4,7 +4,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 const app = express()
-const port = 4000;
+// const port = 4000;
 
 
 import { searchRouter } from './src/routes/search.route.js';
@@ -91,10 +91,10 @@ app.route('/search/route')
         res.send("hello i am ./search/route");
     });
 
-//  app.listen(process.env.PORT, () => {
-//     console.log(`"its a port ${process.env.PORT}"`);
-// })
-
-app.listen(port, () => {
-    console.log(`"its a port ${port}"`);
+ app.listen(process.env.PORT, () => {
+    console.log(`"its a port ${process.env.PORT}"`);
 })
+
+// app.listen(port, () => {
+//     console.log(`"its a port ${port}"`);
+// })
