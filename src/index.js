@@ -22,40 +22,7 @@ import { Login } from './src/controller/search.controller.js';
 app.use("/auth", Login);
 
 
-//***************************** Method 3******************************/
-const StudentRouter = express.Router()
-app.use('/search/SearchStudentRouter', StudentRouter)
 
-StudentRouter.get('/', (req, res) => {
-    res.send({
-        Message: "i am GET from ./search/StudentRouter ............!",
-        Url: req.baseUrl,
-        Method: req.method
-    });
-});
-StudentRouter.post('/', (req, res) => {
-    res.send({
-        Message: "i am GET from ./search/StudentRouter ............!",
-        Url: req.baseUrl,
-        Method: req.method
-    });
-});
-
-StudentRouter.put('/', (req, res) => {
-    res.send({
-        Message: "i am GET from ./search/StudentRouter ............!",
-        Url: req.baseUrl,
-        Method: req.method
-    });
-});
-
-StudentRouter.delete('/', (req, res) => {
-    res.send({
-        Message: "i am GET from ./search/StudentRouter ............!",
-        Url: req.baseUrl,
-        Method: req.method
-    });
-});
 
 
 //****************************** Method 1 ******************************/
@@ -95,6 +62,38 @@ app.route('/search/route')
     console.log(`"its a port ${process.env.PORT}"`);
 })
 
-// app.listen(port, () => {
-//     console.log(`"its a port ${port}"`);
-// })
+//***************************** Method 3******************************/
+const StudentRouter = express.Router()
+app.use('/search/SearchStudentRouter', StudentRouter)
+
+StudentRouter.get('/', (req, res) => {
+    res.send({
+        Message: "i am GET from ./search/StudentRouter ............!",
+        Url: req.baseUrl,
+        Method: req.method
+    });
+});
+StudentRouter.post('/', (req, res) => {
+    res.send({
+        Message: "i am GET from ./search/StudentRouter ............!",
+        Url: req.baseUrl,
+        Method: req.method
+    });
+});
+
+StudentRouter.put('/', (req, res) => {
+    res.send({
+        Message: "i am GET from ./search/StudentRouter ............!",
+        Url: req.baseUrl,
+        Method: req.method
+    });
+});
+
+StudentRouter.delete('/', (req, res) => {
+    res.send({
+        Message: "i am GET from ./search/StudentRouter ............!",
+        Url: req.baseUrl,
+        Method: req.method
+    });
+});
+

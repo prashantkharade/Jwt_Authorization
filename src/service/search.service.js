@@ -17,13 +17,13 @@ export const deleteResponse = async (req) => {
 import { createjwtToken } from "../common/Authorization.js"
 //***************************new addition of authorization with middleware************/
 export const loginStudent = async (req) => {
-    //console.log("we are in search controller33");
+    console.log("we are in search controller 3");
     const payload = {
         email: req.body.email
     };
-   // console.log("we are in search controller44");
+   console.log("we are in search controller 4");
     if (req.body.email === "prashant@gmail.com" && req.body.pass === "123456") {
-        //console.log("we are in search controller55");
+        console.log("we are in search controller 5");
         var token = createjwtToken(payload);
         return {
             Message: "Login Successful",

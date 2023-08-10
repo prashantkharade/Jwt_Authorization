@@ -7,7 +7,7 @@ import { getResponse1, deleteResponse1, postResponse1, putResponse1 } from '../c
 
 export const login1 = express.Router();
 import { Login } from '../controller/search.controller.js';
-import { authorization } from '../common/Authorization.js';
+
 
 
 searchRouter.get("/", getRequest);
